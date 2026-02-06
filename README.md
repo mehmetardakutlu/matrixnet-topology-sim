@@ -8,8 +8,8 @@ The project emphasizes algorithmic efficiency and memory management, utilizing *
 ## 🚀 Key Features
 
 * **Hybrid Routing Engine:** Calculates optimal paths using two distinct strategies:
-    * *Static Mode ($\lambda=0$):* Standard Dijkstra for lowest latency.
-    * *Dynamic Mode ($\lambda>0$):* A modified pathfinding algorithm that penalizes hop counts, using a **Pareto-Optimal Domination Check** to explore paths that appear more expensive initially but may yield lower total costs due to step penalties.
+    * *Static Mode (λ=0):* Standard Dijkstra for lowest latency.
+    * *Dynamic Mode (λ>0):* A modified pathfinding algorithm that penalizes hop counts, using a **Pareto-Optimal Domination Check** to explore paths that appear more expensive initially but may yield lower total costs due to step penalties.
 * **Critical Infrastructure Analysis:** Identifies **Articulation Points** (Hosts) and **Bridges** (Backdoors) whose failure would partition the network, using optimized connectivity simulations.
 * **Stack-Safe Cycle Detection:** Implements an **Iterative DFS** using explicit `StackFrame` objects to detect cycles in deep graph structures, preventing `StackOverflowError` common in recursive solutions.
 * **Lazy Connectivity Caching:** Tracks topology changes (`isRecordDirty` flag) to cache connected component counts, avoiding redundant $O(V+E)$ BFS operations during repetitive status checks.
